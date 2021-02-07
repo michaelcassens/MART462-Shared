@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8236BC0E-AC18-BD36-DAEF-D4293BE6213C}</ProjectGuid>
+    <ProjectGuid>{C45780F0-04A2-39A9-3923-7B3B85C4463B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Unity.TextMeshPro</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -64,7 +64,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ModTheCube\Cube.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\AssemblyInfo.cs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\FastAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\MaterialReferenceManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Asset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Character.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_CharacterInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ColorGradient.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_CoroutineTween.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_DefaultControls.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Dropdown.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_EditorResourceManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAssetCommon.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAssetUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontFeatureTable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontFeaturesCommon.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_InputField.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_InputValidator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_LineInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ListPool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_MaterialManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_MeshInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ObjectPool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_PackageResourceImporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_RichTextTagStack.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_RichTextTagsCommon.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ScrollbarEventHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SelectionCaret.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Settings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ShaderUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Sprite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAnimator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAssetImportFormats.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteCharacter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteGlyph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Style.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_StyleSheet.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SubMesh.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SubMeshUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Text.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextElement.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextElement_Legacy.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextParsingUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_UpdateManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_UpdateRegistery.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_EventManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_ExtensionMethods.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_MeshUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_Private.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_UGUI_Private.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextContainer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextMeshPro.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextMeshProUGUI.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -247,6 +302,18 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:/Unity/2019.4.8f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>D:/Unity/2019.4.8f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>D:/Unity/2019.4.8f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>D:/Unity/2019.4.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/Beau Goldberg/Documents/GitHub/MART462-Shared/eliGitHubPractice/ModTheCube/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
@@ -604,97 +671,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{331811C8-A6A2-3E05-F0DC-2E079AEF3ADF}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{4000897E-2E4E-CFFE-E74B-941B05E3B65C}</Project>
-      <Name>UnityEngine.Monetization</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Editor.csproj">
-      <Project>{E7366807-C1BB-331A-DF69-79942408DA74}</Project>
-      <Name>com.unity.multiplayer-hlapi.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{63DD4EA3-5A89-F929-5BAC-F4BF8D2E473B}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{145D3A50-9403-B6A9-A769-DA2FDC36164B}</Project>
-      <Name>UnityEngine.Advertisements</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.csproj">
-      <Project>{FE13828A-16D5-9590-A7A4-5C9FC6E352E1}</Project>
-      <Name>UnityEngine.Purchasing</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.Purchasing.csproj">
-      <Project>{29699B55-2BDC-55F7-3EBA-3C1716B8C23F}</Project>
-      <Name>UnityEditor.Purchasing</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{BE281AE0-E61A-937C-C90F-DDB25F5A6649}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{02866598-E07C-9719-E27D-748BFB1B8AEB}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{E37DC308-90FD-C6B8-7FCB-D7FAB28BD601}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
-      <Project>{B6176036-68FB-004F-8FBA-B9DB128FB84A}</Project>
-      <Name>Unity.CollabProxy.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-weaver.Editor.csproj">
-      <Project>{5B23ACEC-6749-F284-9681-15E8363BEE1B}</Project>
-      <Name>com.unity.multiplayer-weaver.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
-      <Project>{E5224E03-0A4F-F28F-C51F-338B86C60BDA}</Project>
-      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{DEDD835C-8904-1F7A-5233-F088D8EB726C}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{E1FDB922-DD1A-D633-B5F6-ACD11D7D6006}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{3C76370F-D390-8F36-8D05-D915DE8D2CB7}</Project>
-      <Name>Unity.2D.Tilemap.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
-      <Project>{1772E9BF-6311-9025-126A-5583684A1F3A}</Project>
-      <Name>UnityEditor.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
-      <Project>{62A10C94-5823-8CBC-38C7-2F2014EC87FA}</Project>
-      <Name>UnityEngine.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{C45780F0-04A2-39A9-3923-7B3B85C4463B}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
-      <Project>{A08960C7-CC0E-2FF6-D6BC-039D8D08D6AF}</Project>
-      <Name>Unity.Analytics.DataPrivacy</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
-      <Project>{85382EF8-2A78-0DE3-CF48-174D764AB37E}</Project>
-      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{8032D0AB-FFFE-4FBB-594B-CDC9E7E22501}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Runtime.csproj">
-      <Project>{5E583159-7119-70B4-0FD8-2F9932F98F8D}</Project>
-      <Name>com.unity.multiplayer-hlapi.Runtime</Name>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{02866598-E07C-9719-E27D-748BFB1B8AEB}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

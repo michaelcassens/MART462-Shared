@@ -12,7 +12,7 @@ public class Cube : MonoBehaviour
     public float rotateSpeed = 10.0f * Time.deltaTime;
 
     //Color Variables
-    public float colorDelay = 2.0f;
+    public float colorDelay = 3.0f;
 
     //Scale Variables
     public float growDelay = 2.0f;
@@ -42,7 +42,7 @@ public class Cube : MonoBehaviour
 
     void GrowingShrinking()
     {
-        originalSize = Random.Range(1, 5);
+        originalSize = Random.Range(1, 6);
         transform.localScale = Vector3.one * originalSize;
     }
 }
