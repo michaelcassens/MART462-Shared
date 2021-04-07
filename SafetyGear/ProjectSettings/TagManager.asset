@@ -6,6 +6,9 @@ TagManager:
   tags:
   - HoodSelector
   - GetHood
+  - ToggleGroupTag
+  - GarmentTypeButtonTag
+  - HoodToggleTag
   layers:
   - Default
   - TransparentFX

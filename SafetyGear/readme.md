@@ -1,26 +1,48 @@
-# Safety Gear Dress Up Project
+# Welidng Dress Up Module
+# Uses Unity 2019.4.20f1
+# 04/07/2021
 
-## College Simulator
-## MART 462, Sect. 50
-## 03/22/2021
+## How It Works So Far
+At the moment, this module is a sort of Frankenstein creation made up of multiple tutorial scripts, some blind guess work, and a little sprinkle of general incompetence. On the left side of the screen there are three sets of previous and next buttons, three toggles, and a toggle test button on the bottom. Clicking on any of the previous/next buttons on the left side of the screen will change what the avatar in the center of the screen is wearing. Clicking on the toggles will write a message to the console and change the text between the previous/next button on the right side of the screen. The Toggle Test button writes a message to the console when clicked - the message changes based on which toggle is currently on. This button is largely unnecessary and exists mainly as a way to test the code I am writing. 
+
+Clicking on the next button on the right side of the screen will change both the hood and torso elements on the central avatar, but only if the hood toggle is selected on the left side of the screen. Ideally, only one element -- either hood, torso, or face -- would change when the next button on the right side of the screen is pressed based on whatever toggle is currently selected. I'll discuss that in more detail in the To Do section.
 
 
-### Brief Description of Project
+### OutfitChanger Script
+This script uses a public list of Sprites and the Sprite Renderer Component to change the centrally located avatar's appearance. Much of the code was copied more or less directly from [this video.](https://www.youtube.com/watch?v=kAPIWJJ6NQI) The `OutfitChanger` script is attatched to each of the `HoodSelector`, `TorsoSelector`, and `FaceSelector` GameObjects, which themselves are grandchildren of the Canvas GameObject. 
 
-Ideally, this project would work like a mostly standard character creation / item equiping menu. The player will choose from a couple different type of garment options and then be able to apply those garments to their character. As this is a program meant to teach welding safety, different garments will come with different safety ratings and the goal is for the player to find a suitable set of garments that will protect them while welding. While the player looks through the different garment options, text should describe each piece and how well suited it is for welding. 
+The Next and Previous buttons are children of the different garment selector game objects. These buttons use their built-in OnClick function to then run the `NextOption()` or `PreviousOption()` methods in the `OutfitSelector` script. These methods simply cycle through a list of sprites by increasing or decreasing a variable which corresponds to the Sprite list index number.
 
-### How Does It Work?
+There is currently an `If Statement` sitting on the top line of the `NextOption()` method. It does not work as intended, but I'll disscus that in more detail in the To Do section.
 
-It doesn't. I've spent the past two weeks slowly losing my mind over something that I feel like shouldn't be too difficult to implement. Currently, it is possible to change the stand-in-avatar's appearance by clicking on the next and previous buttons and the toggle switches write a message to the console, but other than that, not much is going on. 
 
-I started with a 2-D avatar as I found a tutorial which I thought would help me get started on this project. Much of the code found in the project is more or less taken directly from that tutorial. [Here is the link for the curious.](https://www.youtube.com/watch?v=kAPIWJJ6NQI)
+### Toggle Selector Script
+The functioning bit of this script is mostly straight forward. Using the toggle element's built in `isOn` function, the text on the right side of the screen between the next/previous button changes to match whatever toggle is currently on. The `ToggleSelector` script is attatched to the `ToggleGroup` GameObject which is a grandchild of the `Canvas` GameObject. The toggle GameObject children of the `ToggleGroup` use the On Value Changed (Boolean) method to activate the `ActiveToggle()` method in the `ToggleSelector` script. 
 
-Because the avatar uses skeletal animation, it is possible to replace each body part with a different sprite without losing any animation or needing to create extensive sprite sheets for cosmetic changes. Everytime the player clicks on a previous or next button, the current sprite is replaced by the next, or previous sprite, in a list of sprite options. 
 
-### How Should It Work?
+### GarmentType Script
+This script is a simple class I am hoping to use to store information about each individual garment. Ideally, each garment would come with a name, a type, a description, an image/3D object, and a safety rating. Currently, it only has two attributes, title and description. Instances of this class are instantiated in the `OutfitChanger` script and because that script is already attatched to the `HoodSelector`, `TorsoSelector`, and `FaceSelector` GameObjects, the class intances are also attatched. Ideally, this class would handle the list of Sprites, which the `OutfitChanger` script does already, but I have not yet figured out how to do that. Will be discussed more in the To Do section.
 
-If I were more competent, there would only be one set of previous / next buttons which would be used to cycle through all different garment types. Choosing one of the toggle options would determine which set of garments to cycle through. Toggles could also load / deload certain array lists depending on which toggle is currently on.
 
-Dynamic text should update to display which garment type is selected, which garment of that garment type is currently selected, and a brief description of that garment should be displayed as well. I thought the best way of doing this would be to use scriptable objects, (I'm assuming they work like JSON files?) which would contain each garments type, name, safety rating, 3-D object, description, etc..
+## To Do
+A whole lot! 
 
-This project currently uses 2-D sprites which isn't ideal as the base game uses 3-D avatars. Originally, I tried using one of the blockhead avatars from the base game, but I couldn't make anything with that work, so I tried with 2-D place-holder-avatars instead. I really hope changing this from a 2-D to 3-D avatar customizer won't be too complicated... 
+### Toggles on the Left, Previous/Next Buttons on the Right
+I want the left side of the screen to be populated with different toggles which would correspond to different garment types. Selecting one of these toggles would then determine what the single set of previous/next buttons on the right of the screen would cycle through. Each garment piece would come with a name, image preview, description, and a safety rating. 
+
+My attempts to get the different garment types to share a single set of previous/next buttons has not gone well. At the moment clicking the Next button on the right side of the screen changes both the hood and torso appearance. That is because the built in onClick function calls the `NextOption()` method for both the `HoodSelector` and `TorsoSelector` GameObjects. There probably needs to be some sort of test to see which toggle is active before calling the `NextOption()` method, but I have not yet figured it out. I tried using the variable `currentActiveGarment` in the `ToggleSelector` script to hold onto whichever toggle is currently on, but I don't think this is the best way to go about it.
+
+### GarmentType Class Integration
+Rather than use the `OutfitChanger` script to store the list of sprites, I think it would be better handled by a class which could then also hold more information. I have started this process with the `GarmentType` class, but I have not yet been able to integrate it into the rest of the module. 
+
+### Switch to 3D
+I started this project with a 2D avatar as there were more tutorials about this kind of thing using 2D sprites. The project we are working in however, is a 3D environment. Initially, I did try to use the BlockHead avatar found in the Base Game assets, but I could not figure out how to fit it into this module. 
+
+### Safety Rating 
+Each garment should come with a safety rating. This could be displayed with a slider bar which fills up depending on the sum of safety ratings of the currently equipped garments. I have not started on this bit at all.
+
+### Save States
+Should the player be able to save the garments they have equiped for the next welding module they enter into? Should the student be allowed to access more advanced modules if their safety rating is too low? Should the student gain experience for completing this module?
+
+
+

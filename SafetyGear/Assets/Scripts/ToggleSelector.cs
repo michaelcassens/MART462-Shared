@@ -2,52 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ToggleSelector : MonoBehaviour
 {
     // Garment Selector References
-    public OutfitChanger _outfitChanger;
+    //public OutfitChanger _outfitChanger;
+    
+    // Text Mesh pro Reference
+    public TMP_Text garmentTitle;
 
     // Toggle Game Objects
     public Toggle isHood;
     public Toggle isTorso;
     public Toggle isFace;
 
-    /*public void Start()
+    // Currently Selected Garment Variables
+    public GameObject currentActiveGarment;
+    public GameObject hoodToggleRef;
+
+    public void Start()
     {
-        GameObject _outfitChanger = GameObject.FindWithTag("GetHood");
-
-        _outfitChanger.GetComponent<OutfitChanger>().enabled = false;
-
-        if (_outfitChanger == null)
-          {
-              Debug.Log("Nada");
-          }  else if(_outfitChanger != null)
-          {
-              Debug.Log(_outfitChanger.ToString());
-          }
-
-
-
-        GameObject.FindWithTag("HoodSelector").GetComponent<OutfitChanger>().enabled = false;
-    }*/
+        // Assigns tagged TextMeshPro GameObject to garmentTitle variable. Later used in ActiveToggle method to change text on ride side of screen between previous and next buttons
+        garmentTitle = GameObject.FindWithTag("GarmentTypeButtonTag").GetComponent<TMPro.TextMeshProUGUI>();
+        // Was hoping to use this variable to prevent right side previous and next buttons from changing multiple garment types at once. It does not work.
+        hoodToggleRef = GameObject.FindWithTag("HoodToggleTag");
+    }
 
     // Checks for Active Toggle
+    // Changes Text Between Previous and Next Button to Match Currently Selected Toggle
+    // Setting variable hoodToggleRef to currentActiveGarment is supposed to then allow multiple garment selectors to share a single set of next/previous buttons. It does not work.
     public void ActiveToggle()
     {
         if(isHood.isOn)
         {
             Debug.Log("Player Selected Hood");
-        } else if(isTorso.isOn)
+            hoodToggleRef = currentActiveGarment;
+            garmentTitle.text = "Hood";
+        } 
+        else if(isTorso.isOn)
         {
             Debug.Log("Player Selected Torso");
-        } else if(isFace.isOn)
+            garmentTitle.text = "Torso";
+        } 
+        else if(isFace.isOn)
         {
             Debug.Log("Player Selected Face");
+            garmentTitle.text = "Face";
         }
     }
 
-    // Tests whether Active Toggle function is Working How I Want
+    // Tests whether Active Toggle function is working how I want
     public void OnSubmit()
     {
         Debug.Log("Selecting Garment...");
