@@ -5,16 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class GarmentType
 {
-    //public string garmentType;
     public string garmentTitle;
     public string garmentDescription;
-    //public Sprite spritePreview;
+    public int rating;
     
-    public GarmentType(string title, string description)
+    public GarmentType(string title, string description, int rating)
     {
-        //this.garmentType = type;
         this.garmentTitle = title;
         this.garmentDescription = description;
-        //this.spritePreview = spriteImg;
+        this.rating = rating;
     }
 }

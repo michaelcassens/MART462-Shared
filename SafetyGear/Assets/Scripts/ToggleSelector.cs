@@ -13,11 +13,14 @@ public class ToggleSelector : MonoBehaviour
     public TMP_Text garmentTitle;
 
     // Toggle Game Objects
-    public Toggle isHood;
-    public Toggle isTorso;
-    public Toggle isFace;
+    [Header("Toggles")]
+    [SerializeField] Toggle isHood;
+    [SerializeField] Toggle isTorso;
+    [SerializeField] Toggle isFace;
 
     // Currently Selected Garment Variables
+    [Header("Toggle State")]
+    private bool activeToggle;
     public GameObject currentActiveGarment;
     public GameObject hoodToggleRef;
 
@@ -36,18 +39,18 @@ public class ToggleSelector : MonoBehaviour
     {
         if(isHood.isOn)
         {
-            Debug.Log("Player Selected Hood");
+            //Debug.Log("Player Selected Hood");
             hoodToggleRef = currentActiveGarment;
             garmentTitle.text = "Hood";
         } 
         else if(isTorso.isOn)
         {
-            Debug.Log("Player Selected Torso");
+            //Debug.Log("Player Selected Torso");
             garmentTitle.text = "Torso";
         } 
         else if(isFace.isOn)
         {
-            Debug.Log("Player Selected Face");
+            //Debug.Log("Player Selected Face");
             garmentTitle.text = "Face";
         }
     }
@@ -55,8 +58,13 @@ public class ToggleSelector : MonoBehaviour
     // Tests whether Active Toggle function is working how I want
     public void OnSubmit()
     {
-        Debug.Log("Selecting Garment...");
+        //Debug.Log("Selecting Garment...");
 
         ActiveToggle();
+    }
+
+    public bool GetActiveToggle()
+    {
+        return activeToggle;
     }
 }

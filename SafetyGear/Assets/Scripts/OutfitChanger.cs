@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class OutfitChanger : MonoBehaviour
@@ -9,41 +11,40 @@ public class OutfitChanger : MonoBehaviour
     [Header("Sprite To Change")]
     public SpriteRenderer bodyPart;
 
+    // Simple Image Display of Applied Gear Seperate from the Player
+    public Image displayImage;
+
     // Creates new list populated with sprites
     [Header("Sprites To Cycle Through")]
     public List<Sprite> options = new List<Sprite>();
 
+    [Header("Display Changers")]
+    [SerializeField] TMP_Text objectTitle;
+    [SerializeField] TMP_Text objectDescription;
+    [SerializeField] TMP_Text objectRating;
+
     // Creates new private variable for tracking position in array
     private int currentOption = 0;
 
-    // Creates new variable meant to reference the HoodToggle game object
-    public GameObject hoodToggleRef;
+    public int garmentArraySize = 5;
+
 
     // Creates new instances of GarmentType class with two attributes
     // Number of attributes is currently hard coded which probably isn't ideal. Sorry!
-    public GarmentType[] garments = new GarmentType[2];
+    public List<GarmentType> garments = new List<GarmentType>();
 
     public void Start()
     {
-        hoodToggleRef = GameObject.FindWithTag("HoodToggleTag");
-        
-        //garments[0] = new GarmentType("Hood", "This hood covers the head.");
+        displayImage.sprite = options[currentOption];
+        objectTitle.text = garments[currentOption].garmentTitle;
+        objectDescription.text = garments[currentOption].garmentDescription;
+        objectRating.text = garments[currentOption].rating.ToString();
+        CheckForNullImage();
 
-    }
-
-    public void Update()
-    {
-        //Debug.Log(toggleScriptRef.GetComponent<ToggleSelector>().isHood.isOn);
-        //Debug.Log(toggleScriptRef.GetComponent<ToggleSelector>().isFace.isOn);
-        //Debug.Log(toggleScriptRef.GetComponent<ToggleSelector>().isTorso.isOn);
     }
 
     public void NextOption()
     {
-        // If statement does not currently work as intended
-        // Ideally it would only allow the hood to change appearance if hood togle is on
-        if(hoodToggleRef == true)
-        {
         currentOption++;
         // Resets to top of list after cycling through all options
         if (currentOption >= options.Count)
@@ -53,7 +54,12 @@ public class OutfitChanger : MonoBehaviour
 
         // Displayed sprite corresponds to index value
         bodyPart.sprite = options[currentOption];
-        }
+        displayImage.sprite = options[currentOption];
+        objectTitle.text = garments[currentOption].garmentTitle;
+        objectDescription.text = garments[currentOption].garmentDescription;
+        objectRating.text = garments[currentOption].rating.ToString();
+
+        CheckForNullImage();
 
     }
 
@@ -67,6 +73,28 @@ public class OutfitChanger : MonoBehaviour
         }
 
         bodyPart.sprite = options[currentOption];
+        displayImage.sprite = options[currentOption];
+        objectTitle.text = garments[currentOption].garmentTitle;
+        objectDescription.text = garments[currentOption].garmentDescription;
+        objectRating.text = garments[currentOption].rating.ToString();
+
+        CheckForNullImage();
+    }
+
+    public void CheckForNullImage()
+    {
+        if (currentOption == 5 && options[5] == null)
+        {
+            var tempColor = displayImage.color;
+            tempColor.a = 0f;
+            displayImage.color = tempColor;
+        }
+        else
+        {
+            var tempColor = displayImage.color;
+            tempColor.a = 1f;
+            displayImage.color = tempColor;
+        }
     }
 
 }
