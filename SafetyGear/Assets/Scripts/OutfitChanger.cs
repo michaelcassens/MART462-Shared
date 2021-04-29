@@ -97,4 +97,14 @@ public class OutfitChanger : MonoBehaviour
         }
     }
 
+    public List<GarmentType> GetGarments()
+    {
+        return garments;
+    }
+
+    public int GetActiveOption()
+    {
+        return currentOption;
+    }
+
 }
